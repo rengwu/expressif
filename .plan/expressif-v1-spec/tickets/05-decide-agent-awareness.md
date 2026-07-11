@@ -1,6 +1,8 @@
 ---
 type: grilling
 blocked_by: [01, 02, 03]
+claimed_by: claude-fable-5-session-163b94bf
+claimed_at: 2026-07-12T10:30:00+08:00
 ---
 
 # Decide the agent-awareness mechanism
