@@ -14,3 +14,4 @@ Structured inputs (choices, slider, datepicker, form) block the agent awaiting a
 - Multiple pending widgets at once: allowed or forbidden?
 - Timeouts, dismissal, and "Other/free-text" escape on choice widgets.
 - What the widget looks like after answering (frozen with the selection shown?).
+- Surviving harness tool-execution timeouts (surfaced by [Validate MCP Apps against expressif's requirements](01-validate-mcp-apps.md)): a blocked elicitation/tool call is a "slow tool" to the harness — decide timeout configuration and the recovery UX when the harness gives up before the user answers.

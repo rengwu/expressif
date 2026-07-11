@@ -21,6 +21,8 @@ Scope fixed during charting (2026-07-11):
 
 <!-- one line per resolved ticket: gist + link -->
 
+- [Validate MCP Apps against expressif's requirements](./tickets/01-validate-mcp-apps.md) — GO: MCP Apps + MCP elicitation cover all hard requirements fully offline; neither harness is an Apps host, so the adapter compensates via the proxy-host pattern (one proxy MCP server facing the harness, expressif as the real Apps host behind it).
+
 ## Not yet specified
 
 - **Streaming and progressive rendering.** How text and widgets render mid-stream, given each harness's event granularity — can't sharpen until the harness surfaces are mapped. <clears-with: 04>
