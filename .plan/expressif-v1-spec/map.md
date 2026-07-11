@@ -24,12 +24,11 @@ Scope fixed during charting (2026-07-11):
 - [Validate MCP Apps against expressif's requirements](./tickets/01-validate-mcp-apps.md) — GO: MCP Apps + MCP elicitation cover all hard requirements fully offline; neither harness is an Apps host, so the adapter compensates via the proxy-host pattern (one proxy MCP server facing the harness, expressif as the real Apps host behind it).
 - [Map Claude Code's programmatic surface](./tickets/02-map-claude-code-surface.md) — Agent SDK is the surface: streaming-input mode mandatory, token deltas available, `canUseTool` is the permission/input passthrough, native `AskUserQuestion` (with HTML option previews) and `requiresUserInteraction` tools give two sanctioned input channels to unify with elicitation; tool search hides tool descriptions by default (awareness caveat); SDK is proprietary — peer-dependency only.
 - [Map opencode's programmatic surface](./tickets/03-map-opencode-surface.md) — `opencode serve` HTTP+SSE is the surface (MIT SDK generated from its OpenAPI spec): token deltas and busy-session queueing native, permission respond has no input-rewriting (capability-flag it in the contract), the native `question` tool is near-isomorphic to `AskUserQuestion`, MCP results pass through JSON-encoded (proxy-host stands), per-message `system` field is the cleanest awareness hook yet, offline via bundled openai-compatible provider + models.dev snapshot; fast-moving API — pin server+SDK together.
+- [Define the harness adapter contract](./tickets/04-define-adapter-contract.md) — two-level contract (`HarnessAdapter` + `HarnessSession`): required floor is the chat minimum (part-based two-tier event stream, send with queue guarantee, permission intersection, three-layer errors, proxy-only plugin surface with session attribution, harness-owned persistence with required read-back); all variance rides on a static descriptor of ~19 capability flags; adapters ship as separate packages (Claude Code SDK as peer dep, opencode SDK pinned exactly) that warn, not refuse, on version drift.
 
 ## Not yet specified
 
-- **Streaming and progressive rendering.** How text and widgets render mid-stream, given each harness's event granularity — can't sharpen until the harness surfaces are mapped. <clears-with: 04>
 - **Multi-agent and multi-session shape.** iudex runs several agents at once — one `<agent-chat>` per session, or a multiplexed surface? Hangs on who owns the harness process. <clears-with: 10>
-- **Conversation persistence.** Whether transcript storage and replay belong to the harness, the core, or the host app. <clears-with: 04>
 - **Theming depth.** Which CSS custom properties, slots, and parts the component commits to publicly. <clears-with: 09>
 
 ## Out of scope

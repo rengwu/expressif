@@ -14,6 +14,18 @@ A CLI/TUI coding agent runtime that expressif wraps — e.g. Claude Code, openco
 
 The layer that normalizes one harness's programmatic surface (sessions, events, input, permissions) into expressif's common contract.
 
+## Harness session
+
+One conversation with an agent, as normalized by a harness adapter — the live handle the chat surface drives: its event stream, input, interrupt, and history. The harness owns the durable transcript behind it.
+
+## Part
+
+The unit of content within a message on the normalized event stream — a run of text, a reasoning block, a tool call, a file. Parts appear and update in place as the agent works; a tool part carries its lifecycle state (pending, running, completed, error).
+
+## Capability flag
+
+A named feature a harness adapter declares it supports beyond the required contract floor (e.g. text deltas, input rewriting on approval, fork). The chat surface reads the flags once and shapes its affordances; absent capabilities degrade visibly, never silently.
+
 ## Chat surface
 
 The visible chat panel expressif provides — messages, widgets, and the fallback input. The thing a consuming app embeds.
