@@ -1,6 +1,8 @@
 ---
 type: grilling
 blocked_by: [01]
+claimed_by: claude-fable-5-session-163b94bf
+claimed_at: 2026-07-12T12:40:00+08:00
 ---
 
 # Pin transcript representation and text degradation
