@@ -1,6 +1,8 @@
 ---
 type: research
 blocked_by: [01]
+claimed_by: claude-fable-5-session-163b94bf
+claimed_at: 2026-07-12T11:20:00+08:00
 ---
 
 # Validate sandboxing of agent HTML in a Tauri webview
