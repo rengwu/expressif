@@ -42,6 +42,10 @@ One of the three rendering capabilities the framework itself defines: **Markdown
 
 A single rendered instance of a primitive inside the chat — one choice prompt, one HTML preview, one diagram.
 
+## Canonical text form
+
+The plain-text record a widget leaves in the conversation — the outcome, not the UI ("record of consequence"): what was asked, what was chosen. Self-contained by rule, so it survives compaction and reads coherently in a plain terminal. Generated per primitive: markdown is its own form, structured-input forms are derived from schema and answer, agent-authored HTML must bring its own summary.
+
 ## Return channel
 
 The path by which a user's interaction with a structured input travels back to the agent as data (rather than the user echoing it as text).
