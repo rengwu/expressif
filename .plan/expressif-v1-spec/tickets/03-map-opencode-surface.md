@@ -1,6 +1,8 @@
 ---
 type: research
 blocked_by: []
+claimed_by: claude-fable-5-session-c94c4171
+claimed_at: 2026-07-11T16:40:00+08:00
 ---
 
 # Map opencode's programmatic surface
