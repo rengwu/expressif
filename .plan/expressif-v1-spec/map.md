@@ -22,6 +22,7 @@ Scope fixed during charting (2026-07-11):
 <!-- one line per resolved ticket: gist + link -->
 
 - [Validate MCP Apps against expressif's requirements](./tickets/01-validate-mcp-apps.md) — GO: MCP Apps + MCP elicitation cover all hard requirements fully offline; neither harness is an Apps host, so the adapter compensates via the proxy-host pattern (one proxy MCP server facing the harness, expressif as the real Apps host behind it).
+- [Map Claude Code's programmatic surface](./tickets/02-map-claude-code-surface.md) — Agent SDK is the surface: streaming-input mode mandatory, token deltas available, `canUseTool` is the permission/input passthrough, native `AskUserQuestion` (with HTML option previews) and `requiresUserInteraction` tools give two sanctioned input channels to unify with elicitation; tool search hides tool descriptions by default (awareness caveat); SDK is proprietary — peer-dependency only.
 
 ## Not yet specified
 
