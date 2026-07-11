@@ -56,7 +56,11 @@ A skill-plus-plugin bundle tuned to a use case (ideation grilling, D&D, finance)
 
 ## Agent awareness
 
-Whatever makes the agent know an expressif surface is attached and how to use its capabilities — tool descriptions, prompt injection, and/or skills. Mechanism to be decided.
+What makes the agent know an expressif surface is attached and how to use its capabilities. Three layers: the existence preamble (prompt-injected invariants), capability discovery (the enabled tools themselves), and usage guidance (scenario-pack skills). Session-scoped — never written into the user's project.
+
+## Existence preamble
+
+The short, static system-prompt block that tells the agent an expressif surface is attached, names the three primitives and the canonical-text obligation, and points at the expressif tools. It never enumerates plugins — which tools exist is the tool list's truth, not the preamble's.
 
 ## Host (embedding app)
 
