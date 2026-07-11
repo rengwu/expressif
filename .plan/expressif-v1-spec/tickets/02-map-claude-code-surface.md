@@ -1,6 +1,8 @@
 ---
 type: research
 blocked_by: []
+claimed_by: claude-fable-5-session-847e1e98
+claimed_at: 2026-07-11T16:45:00+08:00
 ---
 
 # Map Claude Code's programmatic surface
