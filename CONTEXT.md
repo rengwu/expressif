@@ -48,7 +48,11 @@ The plain-text record a widget leaves in the conversation — the outcome, not t
 
 ## Return channel
 
-The path by which a user's interaction with a structured input travels back to the agent as data (rather than the user echoing it as text).
+The path by which a user's interaction with a structured input travels back to the agent as data (rather than the user echoing it as text). Degradable: if the harness abandons the blocked call, the answer falls back to a plain chat message carrying the canonical text.
+
+## Input card
+
+The unified widget every structured-input source (native question tools, plugin elicitation, interaction-marked tools) renders as. One lifecycle regardless of source: pending, then answered, superseded (user typed instead), dismissed, downgraded (harness gave up waiting), or detached. One card is active at a time; the rest queue. Frozen with its resolution shown once resolved.
 
 ## Plugin
 
